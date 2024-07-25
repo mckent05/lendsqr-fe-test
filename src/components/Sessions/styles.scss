@@ -6,6 +6,14 @@ $font-family_1: QuickSand, sans-serif;
 $background-color_1: #39cdcc;
 $background-color_2: #fff;
 
+$font-family_1: AvenirNext;
+
+
+@font-face {
+	font-family: AvenirNext;
+	src: url(../../assets/font/AvenirNextCyr-Bold.ttf);
+}
+
 .login__text__cont {
 	position: relative;
 	width: 100%;
@@ -18,12 +26,14 @@ $background-color_2: #fff;
 		color: $color_1;
 		font-weight: lighter;
 		font-size: 15px;
+		font-family: $font-family_1;
 	}
 }
 .login__text {
 	color: $color_2;
 	font-size: 40px;
 	font-weight: 80;
+	font-family: $font-family_1;
 }
 .btn__cont {
 	position: relative;
@@ -38,6 +48,7 @@ $background-color_2: #fff;
 	background-color: $background-color_1;
 	border: none;
 	border-radius: 8px;
+	font-family: $font-family_1;
 	color: $color_3;
 	font-size: 16;
 	font-weight: 700;
@@ -97,6 +108,7 @@ form {
 		height: 45px;
 		border-radius: 5px;
 		position: relative;
+		font-family: $font-family_1;
 		width: 80%;
 		border: 1px solid $color_1;
 		padding-left: 20px;
@@ -111,6 +123,7 @@ form {
 		color: $color_4;
 		font-size: 10px;
 		cursor: pointer;
+		font-family: $font-family_1;
 	}
 }
 @media screen and (min-width: 768px) {
