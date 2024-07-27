@@ -1,50 +1,48 @@
 import React, { useState } from "react";
 import "./UserList.css";
 import UsersListHeader from "./UsersListHeader";
-import "./UserList.css"
-import UserDetails from "../../pages/UserDetails/UserDetails";
-import UsersDetails from "./UsersDetails";
+import "./UserList.css";
 import Filter from "./Filter";
-import ListUsers from "./ListUsers";
+import UsersPagination from "./UsersPagination";
 
 interface UserDetails {
-    name:string
+  name: string;
 }
 
 export interface UsersListHeaderHeaderProps {
-  name: UserDetails
-  showFilter: () => void
+  name: UserDetails;
+  showFilter: () => void;
 }
 
 const UserListContainer = () => {
   const userDetailsHeader: UserDetails[] = [
-    {name:"organization"},
-    {name:"username"},
-    {name:"email"},
-    {name:"phone no"},
-    {name:"date joined"},
-    {name:"status"},
+    { name: "organization" },
+    { name: "username" },
+    { name: "email" },
+    { name: "phone no" },
+    { name: "date joined" },
+    { name: "status" },
   ];
 
-  const [showFilter, setShowFilter] = useState<boolean>(false)
-
- 
+  const [showFilter, setShowFilter] = useState<boolean>(false);
 
   const handleFilterDisplay = () => {
-    setShowFilter((prev) => !prev)
-  }
+    setShowFilter((prev) => !prev);
+  };
 
   return (
     <div className="header__users__cont">
-      {
-        showFilter && <Filter/>
-      }
+      {showFilter && <Filter />}
       <div className="dashboard__users__header__cont">
         {userDetailsHeader.map((detail) => (
-          <UsersListHeader name={detail} showFilter={handleFilterDisplay}  />
+          <UsersListHeader
+            name={detail}
+            key={detail.name}
+            showFilter={handleFilterDisplay}
+          />
         ))}
       </div>
-      <ListUsers />
+      <UsersPagination itemsPerPage={10} />
     </div>
   );
 };

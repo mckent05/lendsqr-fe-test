@@ -1,21 +1,61 @@
-import React, {useState} from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import UsersDetails from './UsersDetails'
+import { UserState } from '../../Store/userSlice'
 
-const ListUsers = () => {
-    const [viewModalIndex, setViewModalIndex] = useState<number | null>(null)
+interface ListUsersProps {
+  currentItems: UserState[]
+  totalItems: number
+  pageOffset: number
+}
 
-    const toggleModal = (modaIndex:number) => {
-        if( viewModalIndex === modaIndex ) {
-          return setViewModalIndex(null)
+const ListUsers = ({
+  currentItems,
+  totalItems,
+  pageOffset,
+}: ListUsersProps) => {
+  const [viewModalIndex, setViewModalIndex] = useState<number | null>(null)
+
+  const useOutsideAlerter = (ref: any) => {
+    useEffect(() => {
+      const handleClickOutside = (event: { target: any }) => {
+        if (ref.current && !ref.current.contains(event.target)) {
+          setViewModalIndex(null)
         }
-        setViewModalIndex(modaIndex)
       }
+      // Bind the event listener
+      document.addEventListener('mousedown', handleClickOutside)
+      return () => {
+        // Unbind the event listener on clean up
+        document.removeEventListener('mousedown', handleClickOutside)
+      }
+    }, [ref])
+  }
+
+  const toggleModal = (modalIndex: number) => {
+    if (viewModalIndex === modalIndex) {
+      return setViewModalIndex(null)
+    }
+    setViewModalIndex(modalIndex)
+  }
+
+  const wrapperRef = useRef<null>(null)
+  useOutsideAlerter(wrapperRef)
   return (
     <div className="all__user__cont">
-        <UsersDetails status="blacklisted" modalToggle={toggleModal} currentModal={viewModalIndex} />
-        <UsersDetails status="inactive" modalToggle={toggleModal} currentModal={viewModalIndex} />
-        <UsersDetails status="active" modalToggle={toggleModal} currentModal={viewModalIndex} />
-        <UsersDetails status="pending" modalToggle={toggleModal} currentModal={viewModalIndex} />
+      {currentItems.map((item, index) => (
+        <UsersDetails
+          modalToggle={toggleModal}
+          currentModal={viewModalIndex}
+          user={item}
+          userIndex={index}
+          handleRef={wrapperRef}
+        />
+      ))}
+      <div className="show__page__details">
+        <p className="list__number">{`Showing ${
+          currentItems.length + pageOffset
+        } out of ${totalItems}`}</p>
+      </div>
     </div>
   )
 }

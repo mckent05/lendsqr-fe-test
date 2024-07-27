@@ -1,40 +1,53 @@
-import React, {useState} from 'react'
-import ReactPaginate from 'react-paginate';
+import React, { useState } from "react";
+import { useSelector } from "react-redux";
+import ReactPaginate from "react-paginate";
+import { RootState } from "../../Store/configureStore";
+import ListUsers from "./ListUsers";
 
-const UsersPagination = ({itemsPerPage}:any) => {
-    const [itemOffset, setItemOffset] = useState(0);
-
-    // Simulate fetching items from another resources.
-    // (This could be items from props; or items loaded in a local state
-    // from an API endpoint with useEffect and useState)
-    const endOffset = itemOffset + itemsPerPage;
-    console.log(`Loading items from ${itemOffset} to ${endOffset}`);
-    const currentItems = items.slice(itemOffset, endOffset);
-    const pageCount = Math.ceil(items.length / itemsPerPage);
-  
-    // Invoke when user click to request another page.
-    const handlePageClick = (event) => {
-      const newOffset = (event.selected * itemsPerPage) % items.length;
-      console.log(
-        `User requested page number ${event.selected}, which is offset ${newOffset}`
-      );
-      setItemOffset(newOffset);
-    };
-  
-    return (
-      <>
-        <Items currentItems={currentItems} />
-        <ReactPaginate
-          breakLabel="..."
-          nextLabel="next >"
-          onPageChange={handlePageClick}
-          pageRangeDisplayed={5}
-          pageCount={pageCount}
-          previousLabel="< previous"
-          renderOnZeroPageCount={null}
-        />
-      </>
-    );
+interface UsersPaginationProp {
+  itemsPerPage: number;
 }
 
-export default UsersPagination
+const UsersPagination = ({ itemsPerPage }: UsersPaginationProp) => {
+  const [itemOffset, setItemOffset] = useState(0);
+
+  const userStore = useSelector((state: RootState) => state.users);
+
+  const { users } = userStore;
+
+  const endOffset = itemOffset + itemsPerPage;
+  const currentItems = users.slice(itemOffset, endOffset);
+  const pageCount = Math.ceil(users.length / itemsPerPage);
+
+  const handlePageClick = (event: { selected: number }) => {
+    const newOffset = (event.selected * itemsPerPage) % users.length;
+    setItemOffset(newOffset);
+  };
+
+  return (
+    <>
+      <ListUsers
+        currentItems={currentItems}
+        pageOffset={itemOffset}
+        totalItems={users.length}
+      />
+      <ReactPaginate
+        breakLabel="..."
+        breakClassName="break__class"
+        nextLabel="next"
+        marginPagesDisplayed={10}
+        pageClassName="page__class"
+        containerClassName="pagination__cont"
+        previousClassName="previous__class"
+        nextClassName="next__class"
+        onPageChange={handlePageClick}
+        pageRangeDisplayed={5}
+        pageCount={pageCount}
+        previousLabel="prev"
+        renderOnZeroPageCount={null}
+      />
+    </>
+  );
+};
+
+export default UsersPagination;
