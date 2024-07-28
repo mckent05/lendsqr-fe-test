@@ -27,7 +27,7 @@ const UsersDetails = ({
       <p className="users__username">{user.username}</p>
       <p className="users__email">{user.email}</p>
       <p className="users__phone">{user.personalInformation.phoneNo}</p>
-      <p className="users__date__joined">May 19, 2020</p>
+      <p className="users__date__joined">{user.personalInformation.dob}</p>
       <p
         className={`status ${
           user.status === "pending" ? "status__pending" : ""

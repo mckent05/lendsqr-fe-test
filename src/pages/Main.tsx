@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar/Navbar";
-import "./main.css";
+import "./main.scss";
 import { AppDispatch, RootState } from "../Store/configureStore";
 import { fetchItems } from "../Store/userSlice";
 

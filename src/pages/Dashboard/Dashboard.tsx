@@ -1,5 +1,5 @@
 import React from 'react'
-import "./dashboard.css"
+import "./dashboard.scss"
 import CardContainer from '../../components/DashBoard/CardContainer'
 import UserListContainer from '../../components/DashBoard/UserListContainer'
 

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import "./UserList.css";
 import UsersListHeader from "./UsersListHeader";
-import "./UserList.css";
+import "./UserList.scss";
 import Filter from "./Filter";
 import UsersPagination from "./UsersPagination";
 

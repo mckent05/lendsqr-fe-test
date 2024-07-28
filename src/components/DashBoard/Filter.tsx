@@ -1,6 +1,6 @@
 import React, {useCallback, useMemo} from 'react'
 import DataListInput, { useComboboxControls } from "react-datalist-input"
-import "./filter.css"
+import "./filter.scss"
 
 interface demo{
     value: string

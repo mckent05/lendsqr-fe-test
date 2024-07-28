@@ -4,7 +4,7 @@ import logo1 from "../../assets/images/userdashboard/logo1.png"
 import logo2 from "../../assets/images/userdashboard/logo2.png"
 import logo3 from "../../assets/images/userdashboard/logo3.png"
 import logo4 from "../../assets/images/userdashboard/logo4.png"
-import "./cards.css"
+import "./cards.scss"
 
 export interface CardList {
   logo: string;
@@ -41,6 +41,7 @@ const CardContainer = () => {
       {cardList.map((card) => (
         <CardDetails
           logo={card.logo}
+          key={card.cardDesc}
           cardDesc={card.cardDesc}
           cardAmount={card.cardAmount}
         />
