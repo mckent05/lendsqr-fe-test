@@ -3,24 +3,22 @@ import { useSelector } from "react-redux";
 import ReactPaginate from "react-paginate";
 import { RootState } from "../../Store/configureStore";
 import ListUsers from "./ListUsers";
+import { UserState } from "../../Store/userSlice";
 
 interface UsersPaginationProp {
   itemsPerPage: number;
+  items: UserState[];
 }
 
-const UsersPagination = ({ itemsPerPage }: UsersPaginationProp) => {
+const UsersPagination = ({ itemsPerPage, items }: UsersPaginationProp) => {
   const [itemOffset, setItemOffset] = useState(0);
 
-  const userStore = useSelector((state: RootState) => state.users);
-
-  const { users } = userStore;
-
   const endOffset = itemOffset + itemsPerPage;
-  const currentItems = users.slice(itemOffset, endOffset);
-  const pageCount = Math.ceil(users.length / itemsPerPage);
+  const currentItems = items.slice(itemOffset, endOffset);
+  const pageCount = Math.ceil(items.length / itemsPerPage);
 
   const handlePageClick = (event: { selected: number }) => {
-    const newOffset = (event.selected * itemsPerPage) % users.length;
+    const newOffset = (event.selected * itemsPerPage) % items.length;
     setItemOffset(newOffset);
   };
 
@@ -29,7 +27,7 @@ const UsersPagination = ({ itemsPerPage }: UsersPaginationProp) => {
       <ListUsers
         currentItems={currentItems}
         pageOffset={itemOffset}
-        totalItems={users.length}
+        totalItems={items.length}
       />
       <ReactPaginate
         breakLabel="..."

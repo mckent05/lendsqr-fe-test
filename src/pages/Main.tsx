@@ -20,7 +20,7 @@ const Main = () => {
       <nav>
         <Navbar />
       </nav>
-      {users.users.length > 0 ? (
+      {users.users.length > 0  ? (
         <Outlet />
       ) : (
         <h1 className="loading__cont">Loading...</h1>
