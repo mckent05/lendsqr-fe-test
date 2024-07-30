@@ -1,10 +1,12 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { CiMenuKebab } from "react-icons/ci";
 import { LuUserX2 } from "react-icons/lu";
 import { LuUserCheck2 } from "react-icons/lu";
 import { SlEye } from "react-icons/sl";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { UserState } from "../../Store/userSlice";
+import { RootState } from "../../Store/configureStore";
 
 export interface UserDetailsProps {
   modalToggle: (index: number) => void;
@@ -21,6 +23,16 @@ const UsersDetails = ({
   user,
   handleRef,
 }: UserDetailsProps) => {
+
+  const userStore = useSelector((state: RootState) => state.users);
+
+  const navigate = useNavigate()
+
+  const navigateUserDetails = () => {
+    const selectedUser = userStore.users.filter((selected) => selected.id === user.id)
+    localStorage.setItem('User', JSON.stringify(selectedUser[0]))
+    navigate(`/dashboard/users/${user.id}`)
+  }
   return (
     <div className="users__details__cont">
       <p className="users__org">{user.personalInformation.company}</p>
@@ -41,18 +53,18 @@ const UsersDetails = ({
         <CiMenuKebab className="menu" onClick={() => modalToggle(userIndex)} />
         {currentModal === userIndex && (
           <div className="menu__list" ref={handleRef}>
-            <Link to={""} className="view__user__link">
+            <button type="button" onClick={navigateUserDetails} className="view__user__link">
               <SlEye />
               <p>View Details</p>
-            </Link>
-            <Link to="/" className="view__user__link">
+            </button>
+            <button type="button" className="view__user__link">
               <LuUserX2 />
               <p>blacklist user</p>
-            </Link>
-            <Link to="/" className="view__user__link">
+            </button>
+            <button type="button" className="view__user__link">
               <LuUserCheck2 />
               <p>activate user</p>
-            </Link>
+            </button>
           </div>
         )}
       </div>
@@ -60,4 +72,6 @@ const UsersDetails = ({
   );
 };
 
-export default UsersDetails;
+export default UsersDetails
+
+

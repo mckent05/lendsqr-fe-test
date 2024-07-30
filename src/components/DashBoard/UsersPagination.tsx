@@ -11,7 +11,7 @@ interface UsersPaginationProp {
 }
 
 const UsersPagination = ({ itemsPerPage, items }: UsersPaginationProp) => {
-  const [itemOffset, setItemOffset] = useState(0);
+  const [itemOffset, setItemOffset] = useState<number>(0);
 
   const endOffset = itemOffset + itemsPerPage;
   const currentItems = items.slice(itemOffset, endOffset);

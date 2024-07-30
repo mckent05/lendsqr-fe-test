@@ -108,15 +108,18 @@ $background-color_7: none;
 	}
 }
 .view__user__link {
-	width: 100%;
+	width: 80%;
 	position: relative;
 	display: flex;
 	column-gap: 5px;
 	padding: 8px 0;
+	border: none;
+	font-size: 16px;
+	background-color: transparent;
 	justify-content: center;
 	align-items: center;
 	margin-left: 20px;
-	text-decoration: none;
+	color: $color_1;
 	&:hover {
 		background-color: $background-color_2;
 		width: 80%;

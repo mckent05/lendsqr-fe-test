@@ -1,0 +1,247 @@
+.details__control__cont {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  position: relative;
+  margin: auto auto;
+  margin-top: 50px;
+  row-gap: 35px;
+}
+
+.back__users__cont {
+  display: flex;
+  width: 95%;
+  margin: 0 auto;
+  position: relative;
+  column-gap: 8px;
+  color: #545f7d;
+  cursor: pointer;
+}
+
+.details__control__info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 15px;
+}
+
+.details__control__info h2 {
+  color: #213f7d;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.details__control__btn__cont {
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 15px;
+}
+
+.details__control__btn__cont button {
+  width: 48%;
+  padding: 7px 2px;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.user__info__wrapper {
+  width: 95%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  column-gap: 15px;
+  margin: 0 auto;
+  border-radius: 3px;
+  padding: 25px 0 0 0;
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+.user__info__cont {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.name__pic__cont {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.user__info__ppic {
+  width: 100px;
+  height: 100px;
+  margin-left: 20px;
+}
+
+.user__info__ppic img {
+  object-fit: fill;
+}
+
+.name__id__cont {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  color: #213f7d;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.name__id__cont h1 {
+  font-size: 17px;
+}
+
+.user__ratings {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ratings__cont {
+  width: 100%;
+  border-right: 1px solid #545f7d;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  align-items: center;
+  justify-content: center;
+  color: #213f7d;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.loan__amount {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 5px;
+}
+
+.loan__amount h2 {
+  color: #213f7d;
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.balance__account__number {
+  color: #213f7d;
+  font-size: 14px;
+}
+
+.active__control {
+  border-bottom: 2px solid #39cdcc;
+  color: #39cdcc;
+}
+
+.pending {
+  color: #ae8705;
+  background-color: #f0dfa6;
+  border: 1px solid #ae8705;
+}
+
+.inactive {
+  color: #505c7d;
+  background-color: #e1e2e5;
+  border: 1px solid #505c7d;
+}
+
+.blacklisted {
+  color: #c10534;
+  background-color: #f8cad6;
+  border: 1px solid #c10534;
+}
+
+.active {
+  color: #39cdcc;
+  background-color: #b8f1c8;
+  border: 1px solid #39cdcc;
+}
+
+.user__info__links {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  overflow: scroll;
+  justify-content: space-around;
+  padding-top: 25px;
+  column-gap: 20px;
+}
+
+.user__info__links h3 {
+  width: 180px;
+  font-weight: 400;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1130px) {
+  .details__control__btn__cont {
+    width: 50%;
+  }
+
+  .details__control__btn__cont button {
+    width: 32%;
+  }
+
+  .details__control__info {
+    margin: 0 auto;
+    width: 95%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .user__info__wrapper {
+    flex-direction: column;
+  }
+
+  .user__info__cont {
+    flex-direction: row;
+    column-gap: 20px;
+  }
+
+  .name__pic__cont {
+    width: 45%;
+    flex-direction: row;
+    border-right: 1px solid #545f7d;
+    column-gap: 0px;
+  }
+
+  .name__id__cont {
+    width: 60%;
+    row-gap: 5px;
+    text-wrap: wrap;
+    padding-right: 20px;
+  }
+
+  .ratings__cont {
+    width: 20%;
+    row-gap: 5px;
+  }
+
+  .loan__amount {
+    width: 20%;
+    align-items: flex-start;
+  }
+
+  .user__info__links {
+    width: 95%;
+    overflow: unset;
+  }
+
+  .user__info__links h3 {
+    width: max-content;
+  }
+}

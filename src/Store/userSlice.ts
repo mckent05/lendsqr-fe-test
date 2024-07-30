@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit'
 
-interface personalInformation {
+export interface personalInformation {
   categoryName: string
   name: string
   phoneNo: string
@@ -9,12 +9,12 @@ interface personalInformation {
   gender: string
   dob: string
   address: string
-  apartmenttype: string
+  type: string
   children: number
   maritalStatus: string
 }
 
-interface educationAndEmployment {
+export interface educationAndEmployment {
   categoryName: string
   levelofEducation: string
   employmentStatus: string
@@ -23,7 +23,7 @@ interface educationAndEmployment {
   monthlyIncome: string
   loanRepayment: number
 }
-interface guarantor {
+export interface guarantor {
   categoryName: string
   name: string
   phoneNo: string
