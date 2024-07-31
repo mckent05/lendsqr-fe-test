@@ -63,11 +63,9 @@ For more information on the importance of a professional README for your reposit
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 Lendsqr Frontend Assesment <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
-
-**[your_project__name]** is a...
+Lendsqr frontend assesment is a frontend assesment for Lendsqr, the assesment involved building 4 pages comprising of the User Page, Dashboard, Login Page, and User Detail page. I built the project using React, SCSS and Typescript. The app fetches random data from a mock API <a href="https://app.json-generator.com/">JSON Generator</a>
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -85,35 +83,28 @@ For more information on the importance of a professional README for your reposit
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li><a href="https://www.typescriptlang.org/">Typescript.js</a></li>
   </ul>
 </details>
 
 <details>
-<summary>Database</summary>
+<summary>SCSS</summary>
   <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+    <li><a href="https://sass-lang.com/">SCSS</a></li>
   </ul>
 </details>
 
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
-
-> Describe between 1-3 key features of the application.
-
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- A User can login using a combination of username and password (App is not connected to any backend but a mockAPI)
+- The app shows a mock list of users that use the lendsqr service
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-
-> Add a link to your deployed project.
-
 - [Live Demo Link](https://google.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -122,83 +113,52 @@ For more information on the importance of a professional README for your reposit
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
-
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
 In order to run this project you need:
 
-<!--
-Example command:
+```sh
+  TypeScript
+```
 
 ```sh
- gem install rails
+  React
 ```
- -->
+
+```sh
+  SCSS
+```
+
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
-
 ```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
+  cd my-project-directory
+  git clone https://github.com/mckent05/lendsqr-fe-test.git
 ```
---->
+-
 
 ### Install
 
 Install this project with:
 
-<!--
-Example command:
-
 ```sh
-  cd my-project
-  gem install
+  cd lendsqr-fe-test
+  npm install
 ```
---->
+-
 
 ### Usage
 
 To run the project, execute the following command:
 
-<!--
-Example command:
-
 ```sh
-  rails server
+  npm start
 ```
---->
-
-### Run tests
-
-To run tests, run the following command:
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
-
-### Deployment
-
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
-
-```
- -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
