@@ -12,12 +12,12 @@ const allLinks: string[] = [
   "App and System",
 ];
 
-interface UserInfo {
+interface UserInfoProps {
   id: string | undefined
   name: string | undefined
 }
 
-const UserInfo = ({id, name}:UserInfo) => {
+const UserInfo = ({id, name}:UserInfoProps) => {
   const [linkControl, setLinkControl] = useState<number>(0);
 
   const handleLink = (index: number) => {

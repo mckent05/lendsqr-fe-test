@@ -1,6 +1,5 @@
 import React from "react";
 import logo from "../../assets/images/logo.png";
-import notification from "../../assets/images/notification.png";
 import userProfilePic from "../../assets/images/user-profile-pic.png";
 import { Link } from "react-router-dom";
 import { MdOutlineSearch } from "react-icons/md";

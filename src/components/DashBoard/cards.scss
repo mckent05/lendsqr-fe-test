@@ -41,7 +41,7 @@ $background-color_1: #fff;
 }
 .card__container {
   position: relative;
-  width: 90%;
+  width: 100%;
   display: flex;
   column-gap: 20px;
   justify-content: center;
@@ -53,6 +53,7 @@ $background-color_1: #fff;
     width: 21%;
   }
   .card__container {
+    width: 90%;
     justify-content: space-between;
   }
 }

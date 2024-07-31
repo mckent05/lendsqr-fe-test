@@ -97,6 +97,7 @@ $background-color_7: none;
   position: relative;
   width: 75%;
   bottom: -60px;
+  padding-bottom: 20px;
   p {
     background-color: $background-color_1;
     box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
@@ -180,6 +181,7 @@ $background-color_7: none;
   overflow: hidden;
   right: -70vw;
   bottom: -150px;
+  padding-bottom: 30px;
 }
 @media screen and (min-width: 1130px) {
   .header__users__cont {
@@ -212,11 +214,13 @@ $background-color_7: none;
   .show__page__details {
     width: 25%;
     bottom: -40px;
+    padding-bottom: 0;
   }
 
   .pagination__cont {
     bottom: -40px;
     max-width: 50%;
+    padding-bottom: 0;
     right: 10px;
   }
 }

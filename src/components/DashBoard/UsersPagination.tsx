@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
 import ReactPaginate from "react-paginate";
-import { RootState } from "../../Store/configureStore";
 import ListUsers from "./ListUsers";
 import { UserState } from "../../Store/userSlice";
 

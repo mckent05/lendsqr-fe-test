@@ -42,7 +42,7 @@ const Filter = ({ filterhandle, filterDisplay, reset }: FilterDemo) => {
           id: index,
           value: org,
         })),
-    [value]
+    [value, users]
   );
 
   const handleFormChange = (event: React.ChangeEvent<HTMLInputElement>) => {

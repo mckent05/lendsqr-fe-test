@@ -4,7 +4,7 @@ import { CiMenuKebab } from "react-icons/ci";
 import { LuUserX2 } from "react-icons/lu";
 import { LuUserCheck2 } from "react-icons/lu";
 import { SlEye } from "react-icons/sl";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { UserState } from "../../Store/userSlice";
 import { RootState } from "../../Store/configureStore";
 

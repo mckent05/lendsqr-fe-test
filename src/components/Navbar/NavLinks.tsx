@@ -11,7 +11,7 @@ const NavLinks = ({ logo, pathName }: NavLinkList) => {
           return `navLink ${isActive && "active__link"}`;
         }}
       >
-        <img className="nav__logo" src={logo} />
+        <img className="nav__logo" src={logo} alt="nav_logo" />
         <p className="link__name">{pathName}</p>
       </NavLink>
     </div>
