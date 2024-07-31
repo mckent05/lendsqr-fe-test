@@ -63,29 +63,15 @@ Lendsqr frontend assesment is a frontend assesment for Lendsqr, the assesment in
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
-
-> Describe the tech stack and include only the relevant sections for your project.
-
-<details>
-  <summary>Client</summary>
-  <ul>
+ <ul>
     <li><a href="https://reactjs.org/">React.js</a></li>
   </ul>
-</details>
-
-<details>
-  <summary>Server</summary>
   <ul>
     <li><a href="https://www.typescriptlang.org/">Typescript.js</a></li>
   </ul>
-</details>
-
-<details>
-<summary>SCSS</summary>
   <ul>
     <li><a href="https://sass-lang.com/">SCSS</a></li>
   </ul>
-</details>
 
 <!-- Features -->
 
