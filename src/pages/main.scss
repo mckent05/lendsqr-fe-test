@@ -1,22 +1,22 @@
 $background-color_1: #e5e7eb;
 
 .main__app__cont {
-	position: relative;
-	background-color: $background-color_1;
+  position: relative;
+  background-color: $background-color_1;
 }
 .loading__cont {
-	position: absolute;
-	top: 50vh;
-	left: 30vw;
-	display: flex;
-	justify-content: center;
+  position: absolute;
+  top: 50vh;
+  left: 30vw;
+  display: flex;
+  justify-content: center;
 }
 @media screen and (min-width: 1130px) {
-	.loading__cont {
-		left: 15vw;
-		top: 12.5vh;
-		width: 78vw;
-		height: 85vh;
-		align-items: center;
-	}
+  .loading__cont {
+    left: 15vw;
+    top: 12.5vh;
+    width: 78vw;
+    height: 85vh;
+    align-items: center;
+  }
 }

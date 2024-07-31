@@ -6,120 +6,120 @@ $background-color_2: #f2f2f2;
 $background-color_3: #39cdcc;
 
 .filter__cont {
-	position: absolute;
-	background-color: $background-color_1;
-	border-radius: 5px;
-	display: flex;
-	justify-content: center;
-	box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
-	width: max-content;
-	left: 2vw;
-	z-index: 900;
-	top: 10vh;
-	border: 1px solid rgb(210, 205, 205);
-	label {
-		font-size: 16px;
-		font-family: $font-family_1;
-	}
+  position: absolute;
+  background-color: $background-color_1;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  width: max-content;
+  left: 2vw;
+  z-index: 900;
+  top: 10vh;
+  border: 1px solid rgb(210, 205, 205);
+  label {
+    font-size: 16px;
+    font-family: $font-family_1;
+  }
 }
 .filter__form__cont {
-	position: relative;
-	width: 95%;
-	display: flex;
-	margin-top: 15px;
+  position: relative;
+  width: 95%;
+  display: flex;
+  margin-top: 15px;
 }
 .filter__input {
-	display: flex;
-	position: relative;
-	flex-direction: column;
-	margin: 0 auto;
-	row-gap: 5px;
-	input {
-		position: relative;
-		height: 30px;
-		width: 210px;
-		margin: auto auto;
-		padding: 3px 10px;
-		font-family: $font-family_1;
-	}
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin: 0 auto;
+  row-gap: 5px;
+  input {
+    position: relative;
+    height: 30px;
+    width: 210px;
+    margin: auto auto;
+    padding: 3px 10px;
+    font-family: $font-family_1;
+  }
 }
 .data__list__cont {
-	display: flex;
-	position: relative;
-	width: 90%;
-	margin: 0 auto;
+  display: flex;
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
 }
 .react-datalist-input__textbox {
-	height: 30px;
-	width: 90%;
-	position: relative;
-	border: 1px solid #545f7d;
-	margin-top: 5px;
-	padding: 3px 10px;
-	font-weight: 300;
-	font-family: $font-family_1;
+  height: 30px;
+  width: 90%;
+  position: relative;
+  border: 1px solid #545f7d;
+  margin-top: 5px;
+  padding: 3px 10px;
+  font-weight: 300;
+  font-family: $font-family_1;
 }
 .react-datalist-input__listbox {
-	width: 100%;
-	overflow-x: hidden;
-	height: 40vh;
-	margin-top: 5px;
-	position: absolute;
-	padding: 0;
-	border: 1px solid grey;
-	border-radius: 8px;
-	background-color: $background-color_1;
-	display: flex;
-	flex-direction: column;
-	list-style-type: none;
-	box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
-	z-index: 10;
+  width: 100%;
+  overflow-x: hidden;
+  height: 40vh;
+  margin-top: 5px;
+  position: absolute;
+  padding: 0;
+  border: 1px solid grey;
+  border-radius: 8px;
+  background-color: $background-color_1;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  z-index: 10;
 }
 .react-datalist-input__listbox-option {
-	width: 100%;
-	cursor: pointer;
-	margin: 0;
-	padding: 5px;
-	text-transform: capitalize;
-	font-family: $font-family_1;
-	&:hover {
-		background-color: $background-color_2;
-		border-radius: 6px;
-	}
+  width: 100%;
+  cursor: pointer;
+  margin: 0;
+  padding: 5px;
+  text-transform: capitalize;
+  font-family: $font-family_1;
+  &:hover {
+    background-color: $background-color_2;
+    border-radius: 6px;
+  }
 }
 .form__button__control {
-	width: 90%;
-	display: flex;
-	justify-content: space-between;
-	padding-bottom: 20px;
-	margin: 0 auto;
-	button {
-		display: flex;
-		position: relative;
-		width: 45%;
-		border-radius: 5px;
-		cursor: pointer;
-		justify-content: center;
-		align-items: center;
-		font-size: 18px;
-		text-transform: capitalize;
-		font-family: $font-family_1;
-		padding: 10px 0;
-	}
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  margin: 0 auto;
+  button {
+    display: flex;
+    position: relative;
+    width: 45%;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    text-transform: capitalize;
+    font-family: $font-family_1;
+    padding: 10px 0;
+  }
 }
 .submit__btn__ {
-	background-color: $background-color_3;
-	color: $color_1;
-	border: none;
+  background-color: $background-color_3;
+  color: $color_1;
+  border: none;
 }
 .reset__control {
-	background-color: $background-color_1;
-	color: $color_2;
-	border: 1px solid #545f7d;
-	outline: none;
+  background-color: $background-color_1;
+  color: $color_2;
+  border: 1px solid #545f7d;
+  outline: none;
 }
 @media screen and (min-width: 1130px) {
-	.filter__cont {
-		width: 30%;
-	}
+  .filter__cont {
+    width: 30%;
+  }
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { MdOutlineKeyboardBackspace } from "react-icons/md";
-import "./detailsTop.css";
+import "./detailsTop.scss";
 import UserInfo from "./UserInfo";
 
 interface userInfoProps {

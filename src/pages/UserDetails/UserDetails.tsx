@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./details.css";
+import "./details.scss";
 import DetailsTopControl from "../../components/DetailsUser/DetailsTopControl";
 import SingleUserDetail from "../../components/DetailsUser/SingleUserDetail";
 import { UserState } from "../../Store/userSlice";

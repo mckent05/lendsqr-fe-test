@@ -44,7 +44,7 @@ const UserInfo = ({id, name}:UserInfo) => {
           </div>
         </div>
         <div className="loan__amount">
-          <h2>200,000</h2>
+          <h2>N200,000</h2>
           <p className="balance__account__number">0060148669/Access Bank</p>
         </div>
       </div>

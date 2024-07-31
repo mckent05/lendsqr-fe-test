@@ -2,20 +2,20 @@ import React from "react";
 
 const Socials = () => {
   return (
-    <div className="socials__cont">
-        <h1 className="category__name"></h1>
-      <div className="persona;__info__wrapper">
+    <div className="socials__cont personal__info__cont">
+        <h1 className="category__name">Socials</h1>
+      <div className="personal__info__wrapper">
         <div className="twitter single__info">
-          <p></p>
-          <h3></h3>
+          <p>Twitter</p>
+          <h3>@graceeffiom</h3>
         </div>
         <div className="facebook single__info">
-          <p></p>
-          <h3></h3>
+          <p>Facebook</p>
+          <h3>Grace Effiom</h3>
         </div>
         <div className="instagram single__info">
-          <p></p>
-          <h3></h3>
+          <p>Instagram</p>
+          <h3>Grace Effiom</h3>
         </div>
       </div>
     </div>
