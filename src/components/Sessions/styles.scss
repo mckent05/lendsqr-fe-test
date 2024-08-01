@@ -66,9 +66,23 @@ $font-family_1: AvenirNext;
   width: 100%;
   height: 35vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+.login__logo__ {
+  position: absolute;
+  top: 5vh;
+  left: 5vw;
+  width: 100px;
+  height: 20px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+  }
+}
+
 .banner__backImg {
   position: relative;
   width: 50%;
@@ -131,6 +145,7 @@ form {
   }
   .banner__cont {
     width: 50%;
+    align-items: flex-start;
     height: 99vh;
   }
   .input__text__cont {
@@ -141,7 +156,7 @@ form {
     justify-content: flex-start;
   }
   .banner__backImg {
-    width: 90%;
+    width: 100%;
     height: 50%;
   }
   form {

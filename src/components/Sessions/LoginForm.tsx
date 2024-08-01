@@ -4,13 +4,13 @@ import Title from './Title'
 import LoginBtn from './LoginBtn'
 
 interface FormProps {
-  username: string
+  email: string
   password: string
 }
 
 const LogInForm = () => {
   const [formDetails, setFormDetails] = useState<FormProps>({
-    username: '',
+    email: '',
     password: '',
   })
 
@@ -25,7 +25,7 @@ const LogInForm = () => {
   }
   const submitLoginForm = (e:React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault()
-    if(formDetails.username && formDetails.password) {
+    if(formDetails.email && formDetails.password) {
       navigate("/dashboard/users")
     }
   }
@@ -35,12 +35,12 @@ const LogInForm = () => {
         <Title />
         <form>
           <input
-            type="text"
-            name="username"
-            id="username"
+            type="email"
+            name="email"
+            id="email"
             placeholder="Email"
             required
-            value={formDetails.username}
+            value={formDetails.email}
             onChange={(e) => handleFormChange(e)}
           />
           <input
